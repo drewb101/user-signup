@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Signup Form</title>
+    </head>
+    <style>
+        body {
+            display: grid;
+            width: max-content;
+            margin: auto;
+            padding: 2em 1em;
+            color: #566b78;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 1.2em;
+            line-height: 1.5;
+        }
+
+        form {
+            border: outset;
+            border-width: thick;
+            border-color: cornflowerblue;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        label {
+            display: flex;
+            margin: .56em;
+        }
+
+        span {
+            min-width: 7em;
+            text-align: left;
+            font-size: 80%;
+        }
+
+        input {
+            margin: 0 2em;
+        }
+
+        .submit_button {
+            margin-left: 1em;
+            margin-bottom: 1em;
+        }
+
+        .error {
+            font-size: 75%;
+            font-style: italic;
+            color: rgb(174, 75, 75);
+            margin: 0 1em;
+        }
+    </style>
+    <body>
+        <h1>Signup Form</h1>
+        <form method='POST' action- '/'>
+
+            <label>
+                <span>Username</span>
+                <input name="username" type="text" value='{{username}}' />
+                <p class="error">{{username_error}}</p>
+            </label>
+
+
+            <label>
+                <span>Password</span>
+                <input name="password" type="password" value='{{password}}' />
+                <p class="error">{{password_error}}</p>
+            </label>
+
+
+            <label>
+                <span>Verify Password</span>
+                <input name="password2" type="password" value='{{password2}}' />
+                <p class="error">{{password2_error}}</p>
+            </label>
+
+
+            <label>
+                <span>Email (optional)</span>
+                <input name="email" type="text" value='{{email}}' />
+                <p class="error">{{email_error}}</p>
+            </label>
+
+
+            <input class="submit_button" type="submit" value="Submit" />
+
+        </form>
+    </body>
+</html>

@@ -1,0 +1,11 @@
+{
+    "python.pythonPath": "C:\\Users\\Drew\\AppData\\Local\\conda\\conda\\envs\\flask-env\\python.exe",
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": false,
+    "python.linting.pydocstyleEnabled": false,
+    "python.linting.pep8Enabled": false,
+    "python.formatting.provider": "yapf",
+    "python.linting.flake8Enabled": true,
+    "python.linting.prospectorEnabled": false,
+    "svn.ignoreMissingSvnWarning": true
+}
