@@ -22,7 +22,7 @@ def index():
 
 
 def is_valid(usr_inpt):
-    if re.match("^[A-Za-z0-9_\S]{3,20}$", usr_inpt):
+    if re.match("^[\w\S]{3,20}$", usr_inpt):
         return True
     else:
         return False
@@ -49,6 +49,9 @@ def verify_input():
         password_error = 'Not a valid password'
         password = ''
         password2 = ''
+
+    if password2 == '':
+        password2_error = "Please verify the password"
 
     if password != password2:
         password2_error = "Passwords don't match"
@@ -77,7 +80,8 @@ def verify_input():
 
 @app.route('/confirm', methods=['POST'])
 def confirm():
-    return success.render()
+    username = request.form['username']
+    return success.render(username=username)
 
 
 app.run()
