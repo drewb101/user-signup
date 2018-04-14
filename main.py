@@ -59,7 +59,7 @@ def verify_input():
         password2 = ''
 
     if email != '':
-        if ' ' in email or "@" not in email or ".com" not in email:
+        if ' ' in email or "@" not in email or "." not in email:
             email_error = 'Not a valid email address'
 
     if not username_error and not password_error and not \
